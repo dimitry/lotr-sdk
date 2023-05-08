@@ -91,6 +91,21 @@ try {
 }
 ```
 
+## Paginating Results
+
+Pagination is supported for results that return lists of movies or quotes. To paginate the results, you can use the offset and limit query parameters when calling the relevant SDK methods. To paginate, create an object with `offset` and `limit` parameters (integers) and pass it to one of the following functions:
+
+- `listMovies()`
+- `getMovieQuotes()`
+- `getQuotes()`
+
+Example:
+
+```typescript
+const options = { limit: 2, offset: 0 };
+const movies = await lotrApi.listMovies(options);
+```
+
 ## Contributing
 
 If you'd like to contribute to this project, please submit an issue or a pull request on the GitHub repository.
